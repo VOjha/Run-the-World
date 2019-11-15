@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Run-the-World</string>
+    <string name="origin">Origin</string>
+    <string name="destination">Destination</string>
+    <string name="from_to_description">From to image</string>
+    <string name="distance_to_run">Distance</string>
+    <string name="distance_unit">miles</string>
+    <string name="in">in</string>
+    <string name="time_needed">Time</string>
+    <string name="time_unit">days</string>
+    <string name="done_activity_button">Done</string>
+    <string name="stop_activity_button">Stop</string>
+    <string name="time_been_running">10 minutes</string>
+    <string name="distance_been_running">2 miles</string>
 </resources>
