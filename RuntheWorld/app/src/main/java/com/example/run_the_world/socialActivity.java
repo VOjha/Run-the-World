@@ -30,7 +30,6 @@ public class socialActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_social);
 
-        text = (TextView) findViewById(R.id.social);
         myList = (ListView)findViewById(R.id.list);
 
         listValues = new ArrayList<String>();
