@@ -18,6 +18,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         enterRunButton = (Button) findViewById(R.id.enter_run);
 
         enterRunButton.setOnClickListener(this);
+
+        Button btn = (Button)findViewById(R.id.social);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, socialActivity.class));
+            }
+        });
     }
 
     public void onClick(View v) {
