@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Run-the-World</string>
+    <string name="social">Social</string>
+    <string name="achievements">Achievements</string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="date">Date</string>
+    <string name="distance">Distance</string>
+    <string name="time">Time</string>
+    <string name="done">Done</string>
+    <string name="to">to</string>
+    <string name="miles">miles</string>
+    <string name="min">min</string>
 </resources>
