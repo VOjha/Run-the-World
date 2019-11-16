@@ -12,6 +12,8 @@
         <activity android:name=".InputRunData"></activity>
         <activity android:name=".DuringRun"></activity>
         <activity android:name=".CreateNewRun" />
+        <activity android:name=".distance_log"></activity>
+        <activity android:name=".achievements" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
