@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< Updated upstream
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,3 +8,99 @@
     tools:context=".SettingsActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <ImageView android:layout_width="wrap_content"
+        android:id="@+id/imageView1"
+        android:src="@drawable/friend"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        ></ImageView>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="190dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/Units"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Units:"/>
+        <EditText
+            android:id="@+id/Language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Units"
+            android:layout_alignLeft="@id/Units"
+            android:text="Language:"/>
+
+        <Spinner
+            android:id="@+id/dist_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_alignBottom="@id/Units"
+            android:layout_toRightOf="@id/Units"
+            android:layout_alignParentRight="true"
+            android:text="km"/>
+
+        <Button
+            android:id="@+id/English"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="100dp"
+            android:layout_alignBottom="@id/Language"
+            android:layout_toRightOf="@id/Language"
+            android:layout_alignParentRight="true"
+            android:text="English"/>
+        <EditText
+            android:id="@+id/Notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Language"
+            android:layout_alignLeft="@id/Units"
+            android:text="Notifications:"/>
+        <Switch
+            android:id="@+id/simpleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/English"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="70dp"
+            android:layout_toRightOf="@id/Notifications"/>
+
+        <Button
+            android:id="@+id/Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:layout_below="@id/Notifications"
+            android:textAllCaps="false"
+            android:text="Logout"/>
+    </RelativeLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+</FrameLayout>
+>>>>>>> Stashed changes
