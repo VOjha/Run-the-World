@@ -23,4 +23,5 @@
     <string name="stop_activity_button">Stop</string>
     <string name="time_been_running">10 minutes</string>
     <string name="distance_been_running">2 miles</string>
+    <string name="finish_button">finish</string>
 </resources>
