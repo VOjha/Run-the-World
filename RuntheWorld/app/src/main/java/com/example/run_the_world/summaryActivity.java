@@ -22,8 +22,8 @@ public class summaryActivity extends AppCompatActivity {
         timeView.setText("Total run time: " + time + " min");
 
         String distance = intent.getStringExtra("distance");
-        TextView distanceView = (TextView)findViewById(R.id.distance);
-        distanceView.setText("Total run distance: " + distance + " km");
+        TextView distanceView = (TextView)findViewById(R.id.input_distance);
+        distanceView.setText("Total run distance: " + distance + " miles");
 
         Button btn = findViewById(R.id.Continue);
 
