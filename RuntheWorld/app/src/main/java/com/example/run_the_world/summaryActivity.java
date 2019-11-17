@@ -18,7 +18,7 @@ public class summaryActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         String time = intent.getStringExtra("time");
-        TextView timeView = (TextView)findViewById(R.id.time);
+        TextView timeView = (TextView)findViewById(R.id.input_time);
         timeView.setText("Total run time: " + time + " min");
 
         String distance = intent.getStringExtra("distance");
