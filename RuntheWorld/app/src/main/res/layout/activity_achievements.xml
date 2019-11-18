@@ -77,11 +77,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
+        android:background="@color/bottomBackground"
         app:labelVisibilityMode="unlabeled"
-        app:itemBackground="@color/colorPrimary"
-        app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"
+        app:itemBackground="@color/bottomBackground"
+        app:itemIconTint="@drawable/bottom_color"
+        app:itemTextColor="@drawable/bottom_color"
         app:menu="@menu/bottom_menu" />
 
 
