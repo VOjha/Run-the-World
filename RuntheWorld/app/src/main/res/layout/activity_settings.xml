@@ -44,7 +44,11 @@
             android:text="Language:"/>
 
         <Spinner
+<<<<<<< Updated upstream
             android:id="@+id/dist_spinner"
+=======
+            android:id="@+id/Km"
+>>>>>>> Stashed changes
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
@@ -52,7 +56,7 @@
             android:layout_alignBottom="@id/Units"
             android:layout_toRightOf="@id/Units"
             android:layout_alignParentRight="true"
-            android:text="km"/>
+            />
 
         <Button
             android:id="@+id/English"
