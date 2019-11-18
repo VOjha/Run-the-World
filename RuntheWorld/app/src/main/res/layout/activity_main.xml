@@ -47,10 +47,22 @@
         app:itemTextColor="@android:color/white"
         app:menu="@menu/bottom_menu" />
 
-    <Button
-        android:id="@+id/social"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="social" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/DuringRun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DuringRun" />
+
+        <Button
+            android:id="@+id/social"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="social" />
+    </LinearLayout>
 
 </RelativeLayout>
