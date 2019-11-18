@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class DuringRun extends AppCompatActivity {
+public class DuringRun extends AppCompatActivity implements View.OnClickListener{
+    private Button backHome;
 
     TextView input_time;
     TextView input_distance;
@@ -34,7 +35,7 @@ public class DuringRun extends AppCompatActivity {
         }
     };
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_during_run);
 
