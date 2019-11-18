@@ -8,8 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class DuringRun extends AppCompatActivity implements View.OnClickListener{
-    private Button backHome;
+public class DuringRun extends AppCompatActivity{
 
     TextView input_time;
     TextView input_distance;
