@@ -79,7 +79,8 @@ public class DuringRun extends AppCompatActivity {
 
                 Intent intent = new Intent(DuringRun.this, summaryActivity.class);
                 intent.putExtra("distance", distance);
-                intent.putExtra("time", min);
+                intent.putExtra("min", min);
+                intent.putExtra("sec", sec);
                 startActivity(intent);
             }
         });

@@ -32,7 +32,8 @@ public class InputRunData extends AppCompatActivity {
                 Intent intent = new Intent(InputRunData.this, summaryActivity.class);
                 intent.putExtra("date", date);
                 intent.putExtra("distance", distance);
-                intent.putExtra("time", time);
+                intent.putExtra("min", time);
+                intent.putExtra("sec", "0");
                 startActivity(intent);
             }
         });
