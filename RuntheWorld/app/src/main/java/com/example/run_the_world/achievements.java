@@ -2,22 +2,30 @@ package com.example.run_the_world;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class SettingsActivity extends AppCompatActivity {
+public class achievements extends AppCompatActivity implements View.OnClickListener{
+    private ImageButton milestoneButton;
+    private ImageButton travelButton;
     private BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_achievements);
+
+        milestoneButton = (ImageButton) findViewById(R.id.milestone);
+        travelButton = (ImageButton) findViewById(R.id.travel_book);
+
+        milestoneButton.setOnClickListener(this);
+        travelButton.setOnClickListener(this);
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
@@ -56,17 +64,17 @@ public class SettingsActivity extends AppCompatActivity {
         });
     }
 
+    public void onClick(View v) {
+        if (v.getId() == R.id.milestone) {
+            Intent milestoneIntent = new Intent(this, distance_log.class);
+            milestoneIntent.setAction(Intent.ACTION_VIEW);
 
-=======
-//        Spinner spinner = (Spinner) findViewById(R.id.Km);
-//        // Create an ArrayAdapter using the string array and a default spinner layout
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-//                R.array.dist_array, android.R.layout.simple_spinner_item);
-//// Specify the layout to use when the list of choices appears
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//// Apply the adapter to the spinner
-//        spinner.setAdapter(adapter);
+            startActivity(milestoneIntent);
+        } else if (v.getId() == R.id.travel_book){
+            Intent travelIntent = new Intent(this, TravelBookActivity.class);
+            travelIntent.setAction(Intent.ACTION_VIEW);
+
+            startActivity(travelIntent);
+        }
     }
-
->>>>>>> Stashed changes
 }

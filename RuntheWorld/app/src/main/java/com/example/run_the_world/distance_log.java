@@ -2,8 +2,6 @@ package com.example.run_the_world;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,13 +9,13 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class SettingsActivity extends AppCompatActivity {
+public class distance_log extends AppCompatActivity {
     private BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_distance_log);
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
@@ -55,18 +53,4 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
     }
-
-
-=======
-//        Spinner spinner = (Spinner) findViewById(R.id.Km);
-//        // Create an ArrayAdapter using the string array and a default spinner layout
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-//                R.array.dist_array, android.R.layout.simple_spinner_item);
-//// Specify the layout to use when the list of choices appears
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//// Apply the adapter to the spinner
-//        spinner.setAdapter(adapter);
-    }
-
->>>>>>> Stashed changes
 }

@@ -2,22 +2,43 @@ package com.example.run_the_world;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class SettingsActivity extends AppCompatActivity {
+public class summaryActivity extends AppCompatActivity {
     private BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_summary);
+
+        Intent intent = getIntent();
+
+        String min = intent.getStringExtra("min");
+        String sec = intent.getStringExtra("sec");
+        TextView timeView = (TextView)findViewById(R.id.input_time);
+        timeView.setText("Total run time: " + min + " min " + sec + " sec");
+
+        String distance = intent.getStringExtra("distance");
+        TextView distanceView = (TextView)findViewById(R.id.input_distance);
+        distanceView.setText("Total run distance: " + distance + " miles");
+
+        Button btn = findViewById(R.id.Continue);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(summaryActivity.this, distance_log.class));
+            }
+        });
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
@@ -56,17 +77,4 @@ public class SettingsActivity extends AppCompatActivity {
         });
     }
 
-
-=======
-//        Spinner spinner = (Spinner) findViewById(R.id.Km);
-//        // Create an ArrayAdapter using the string array and a default spinner layout
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-//                R.array.dist_array, android.R.layout.simple_spinner_item);
-//// Specify the layout to use when the list of choices appears
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//// Apply the adapter to the spinner
-//        spinner.setAdapter(adapter);
-    }
-
->>>>>>> Stashed changes
 }
