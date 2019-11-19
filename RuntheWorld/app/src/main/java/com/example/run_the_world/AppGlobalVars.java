@@ -1,6 +1,6 @@
 package com.example.run_the_world;
 
-public class MyApplication {
+public class AppGlobalVars {
     private String someVariable;
 
     public String getSomeVariable() {

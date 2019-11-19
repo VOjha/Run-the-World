@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/social-nav"
+        android:id="@+id/social_nav"
         android:title="@string/social"
         android:icon="@drawable/friend"/>
     <item
-        android:id="@+id/achievements-nav"
+        android:id="@+id/achievements_nav"
         android:title="@string/achievements"
         android:icon="@drawable/achievement"/>
     <item
-        android:id="@+id/settings-nav"
+        android:id="@+id/settings_nav"
         android:title="@string/settings"
         android:icon="@drawable/setting"/>
     <item
-        android:id="@+id/home-nav"
+        android:id="@+id/home_nav"
         android:title="@string/home"
         android:icon="@drawable/home"/>
 </menu>

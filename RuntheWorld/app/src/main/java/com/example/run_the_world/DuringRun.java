@@ -1,14 +1,19 @@
 package com.example.run_the_world;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class DuringRun extends AppCompatActivity{
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class DuringRun extends AppCompatActivity {
+    private BottomNavigationView bottomNav;
 
     TextView input_time;
     TextView input_distance;
@@ -82,6 +87,42 @@ public class DuringRun extends AppCompatActivity{
                 intent.putExtra("min", min);
                 intent.putExtra("sec", sec);
                 startActivity(intent);
+            }
+        });
+
+        // Stuff for bottom nav bar
+        bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+
+        final Intent socialIntent = new Intent(this, socialActivity.class);
+        socialIntent.setAction(Intent.ACTION_VIEW);
+
+        final Intent achievementsIntent = new Intent(this, achievements.class);
+        achievementsIntent.setAction(Intent.ACTION_VIEW);
+
+        final Intent settingsIntent = new Intent(this, SettingsActivity.class);
+        settingsIntent.setAction(Intent.ACTION_VIEW);
+
+        final Intent homeIntent = new Intent(this, MainActivity.class);
+        homeIntent.setAction(Intent.ACTION_VIEW);
+
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.social_nav:
+                        startActivity(socialIntent);
+                        break;
+                    case R.id.achievements_nav:
+                        startActivity(achievementsIntent);
+                        break;
+                    case R.id.settings_nav:
+                        startActivity(settingsIntent);
+                        break;
+                    case R.id.home_nav:
+                        startActivity(homeIntent);
+                        break;
+                }
+                return true;
             }
         });
     }

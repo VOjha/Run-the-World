@@ -3,14 +3,13 @@
     package="com.example.run_the_world">
 
     <application
-        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
-        <activity android:name=".summaryActivity"></activity>
+        <activity android:name=".summaryActivity" />
         <activity android:name=".InputRunData" />
         <activity android:name=".DuringRun" />
         <activity android:name=".CreateNewRun" />
@@ -18,6 +17,7 @@
         <activity android:name=".achievements" />
         <activity android:name=".socialActivity" />
         <activity android:name=".TravelBookActivity"/>
+        <activity android:name=".SettingsActivity"/>
         <activity android:name=".MainActivity">
 
             <intent-filter>

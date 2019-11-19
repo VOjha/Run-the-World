@@ -17,6 +17,7 @@
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_margin="20dp"
+            android:tint="@color/colorWhite"
             android:src="@drawable/globe"/>
 
         <Button
@@ -46,28 +47,5 @@
         app:itemIconTint="@drawable/bottom_color"
         app:itemTextColor="@drawable/bottom_color"
         app:menu="@menu/bottom_menu" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/DuringRun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DuringRun" />
-
-        <Button
-            android:id="@+id/social"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="social" />
-        <Button
-            android:id="@+id/Achievements"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Achievemtents" />
-    </LinearLayout>
-
+    
 </RelativeLayout>

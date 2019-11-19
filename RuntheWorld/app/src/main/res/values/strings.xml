@@ -24,4 +24,5 @@
     <string name="time_been_running">00:00:00</string>
     <string name="distance_been_running">0.0 miles</string>
     <string name="finish_button">finish</string>
+    <string name="track_run">Track Run</string>
 </resources>
