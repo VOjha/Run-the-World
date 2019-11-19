@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, DuringRun.class));
             }
         });
+        Button btn3 = (Button)findViewById(R.id.Achievements);
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, achievements.class));
+            }
+        });
     }
 
     public void onClick(View v) {

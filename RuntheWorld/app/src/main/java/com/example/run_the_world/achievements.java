@@ -29,7 +29,7 @@ public class achievements extends AppCompatActivity implements View.OnClickListe
             milestoneIntent.setAction(Intent.ACTION_VIEW);
 
             startActivity(milestoneIntent);
-        } else if (v.getId() == R.id.travel_book) {
+        } else {
             Intent travelIntent = new Intent(this, TravelBookActivity.class);
             travelIntent.setAction(Intent.ACTION_VIEW);
 
