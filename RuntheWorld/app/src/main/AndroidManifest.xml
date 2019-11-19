@@ -16,7 +16,9 @@
         <activity android:name=".distance_log" />
         <activity android:name=".achievements" />
         <activity android:name=".socialActivity" />
+        <activity android:name=".TravelBookActivity"/>
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
