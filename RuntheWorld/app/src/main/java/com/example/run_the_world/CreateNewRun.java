@@ -79,6 +79,9 @@ public class CreateNewRun extends AppCompatActivity implements View.OnClickListe
     }
 
     public void onClick(View v) {
+        Globals g = Globals.getInstance();
+        g.createRun();
+
         Intent toTracking = new Intent(this, DuringRun.class);
         toTracking.setAction(Intent.ACTION_VIEW);
         startActivity(toTracking);
