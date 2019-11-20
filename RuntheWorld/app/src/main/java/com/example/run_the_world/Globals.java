@@ -8,6 +8,7 @@ public class Globals{
     // Global variable
     private int data;
     private boolean parisUnlocked = false;
+    private boolean runCreated = false;
 
     // Restrict the constructor from being instantiated
     private Globals(){}
@@ -25,6 +26,14 @@ public class Globals{
 
     public void unlockParis(){
         this.parisUnlocked = true;
+    }
+
+    public boolean isRunCreated() {
+        return this.runCreated;
+    }
+
+    public void createRun() {
+        this.runCreated = true;
     }
 
     public static synchronized Globals getInstance(){

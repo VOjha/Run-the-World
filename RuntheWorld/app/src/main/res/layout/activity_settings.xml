@@ -42,8 +42,7 @@
         android:layout_marginRight="100dp"
         android:layout_alignBottom="@id/Units"
         android:layout_toRightOf="@id/Units"
-        android:layout_alignParentRight="true"
-        />
+        android:layout_alignParentRight="true"/>
         <Spinner
             android:id="@+id/lang_spinner"
             android:layout_width="wrap_content"

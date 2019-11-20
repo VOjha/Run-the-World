@@ -45,6 +45,8 @@ public class InputRunData extends AppCompatActivity {
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        MenuItem homeNav = bottomNav.getMenu().findItem(R.id.home_nav);
+        homeNav.setChecked(true);
 
         final Intent socialIntent = new Intent(this, socialActivity.class);
         socialIntent.setAction(Intent.ACTION_VIEW);

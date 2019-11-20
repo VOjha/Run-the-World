@@ -43,6 +43,8 @@ public class CreateNewRun extends AppCompatActivity implements View.OnClickListe
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        MenuItem homeNav = bottomNav.getMenu().findItem(R.id.home_nav);
+        homeNav.setChecked(true);
 
         final Intent socialIntent = new Intent(this, socialActivity.class);
         socialIntent.setAction(Intent.ACTION_VIEW);
@@ -79,6 +81,9 @@ public class CreateNewRun extends AppCompatActivity implements View.OnClickListe
     }
 
     public void onClick(View v) {
+        Globals g = Globals.getInstance();
+        g.createRun();
+
         Intent toTracking = new Intent(this, DuringRun.class);
         toTracking.setAction(Intent.ACTION_VIEW);
         startActivity(toTracking);

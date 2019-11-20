@@ -56,6 +56,8 @@ public class distance_log extends AppCompatActivity {
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        MenuItem achievementsNav = bottomNav.getMenu().findItem(R.id.achievements_nav);
+        achievementsNav.setChecked(true);
 
         final Intent socialIntent = new Intent(this, socialActivity.class);
         socialIntent.setAction(Intent.ACTION_VIEW);
