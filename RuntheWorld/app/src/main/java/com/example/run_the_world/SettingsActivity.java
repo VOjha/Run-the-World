@@ -54,19 +54,25 @@ public class SettingsActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        Spinner spinnerDist = (Spinner) findViewById(R.id.dist_spinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.dist_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        spinnerDist.setAdapter(adapter);
+
+        Spinner spinnerLang = (Spinner) findViewById(R.id.lang_spinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapterLang = ArrayAdapter.createFromResource(this,
+                R.array.lang_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapterLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        spinnerDist.setAdapter(adapter);
+
+
     }
-
-
-=======
-//        Spinner spinner = (Spinner) findViewById(R.id.Km);
-//        // Create an ArrayAdapter using the string array and a default spinner layout
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-//                R.array.dist_array, android.R.layout.simple_spinner_item);
-//// Specify the layout to use when the list of choices appears
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//// Apply the adapter to the spinner
-//        spinner.setAdapter(adapter);
-    }
-
->>>>>>> Stashed changes
 }

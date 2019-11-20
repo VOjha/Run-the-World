@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="dist_array">
-        <item>Km</item>
-        <item>Miles</item>
-        <item>Feet</item>
-    </string-array>
-</resources>
