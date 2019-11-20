@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         createTripButton.setOnClickListener(this);
         enterRunButton.setOnClickListener(this);
 
-        enterRunButton.setEnabled(false);
+//        enterRunButton.setEnabled(false);
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
