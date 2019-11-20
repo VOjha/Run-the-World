@@ -33,7 +33,7 @@ public class distance_log extends AppCompatActivity {
         if (extras != null) {
             int minutes = Integer.parseInt(extras.getString("MINUTES"));
             int seconds = Integer.parseInt(extras.getString("SECONDS"));
-            int distance = Integer.parseInt(extras.getString("DISTANCE"));
+            int distance = (int) Double.parseDouble(extras.getString("DISTANCE"));
 
             defaultNumDays += 1;
             defaultTotalDist += distance;
