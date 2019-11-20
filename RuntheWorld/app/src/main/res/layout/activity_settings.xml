@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
@@ -35,19 +34,18 @@
             android:layout_alignLeft="@id/Units"
             android:text="Language:"/>
 
-        <Button
-            android:id="@+id/Km"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="100dp"
-            android:layout_alignBottom="@id/Units"
-            android:layout_toRightOf="@id/Units"
-            android:layout_alignParentRight="true"
-            android:text="km"/>
-
-        <Button
-            android:id="@+id/English"
+        <Spinner
+        android:id="@+id/dist_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_alignBottom="@id/Units"
+        android:layout_toRightOf="@id/Units"
+        android:layout_alignParentRight="true"
+        />
+        <Spinner
+            android:id="@+id/lang_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
@@ -55,7 +53,7 @@
             android:layout_alignBottom="@id/Language"
             android:layout_toRightOf="@id/Language"
             android:layout_alignParentRight="true"
-            android:text="English"/>
+            />
         <EditText
             android:id="@+id/Notifications"
             android:layout_width="wrap_content"
@@ -67,7 +65,7 @@
             android:id="@+id/simpleSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/English"
+            android:layout_below="@id/lang_spinner"
             android:layout_marginRight="50dp"
             android:layout_marginLeft="60dp"
             android:layout_marginBottom="70dp"
@@ -102,3 +100,5 @@
         app:menu="@menu/bottom_menu" />
 
 </RelativeLayout>
+
+
