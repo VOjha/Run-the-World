@@ -37,5 +37,5 @@ public class Globals{
 
 
 //Globals g = Globals.getInstance();
-//g.setData(100);
-//int data=g.getData();
+////g.setData(100);
+////int data=g.getData();

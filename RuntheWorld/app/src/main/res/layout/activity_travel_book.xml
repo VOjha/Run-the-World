@@ -6,30 +6,57 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView android:layout_width="wrap_content"
-            android:id="@+id/travelbook1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/travel_book"
+
+
+        <TableLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            ></ImageView>
+            android:padding="20dp">
 
-        <EditText android:id="@+id/simpleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/travelbook1"
-            android:text="Paris" />
-        <EditText
-            android:id="@+id/Paris"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:text="Paris"/>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="20dp">
 
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/paris" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:srcCompat="@drawable/shanghai" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/cairo" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:srcCompat="@drawable/sydney" />
+            </TableRow>
+
+        </TableLayout>
     </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

@@ -31,6 +31,12 @@ public class summaryActivity extends AppCompatActivity {
         TextView distanceView = (TextView)findViewById(R.id.input_distance);
         distanceView.setText("Total run distance: " + distance + " miles");
 
+        //update global
+        Globals g = Globals.getInstance();
+        if (Integer.parseInt(min) > 10){
+            g.unlockParis();
+        }
+
         Button btn = findViewById(R.id.Continue);
 
         btn.setOnClickListener(new View.OnClickListener() {

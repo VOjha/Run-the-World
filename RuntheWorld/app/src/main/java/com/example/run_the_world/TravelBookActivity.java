@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -16,6 +17,14 @@ public class TravelBookActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel_book);
+
+        // style images
+        ImageView img= (ImageView) findViewById(R.id.imageView1);
+
+        Globals g = Globals.getInstance();
+        if (g.isParisUnlocked()){
+            img.setImageResource(R.drawable.paris_unlocked);
+        }
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
