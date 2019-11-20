@@ -21,6 +21,8 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        MenuItem settingsNav = bottomNav.getMenu().findItem(R.id.settings_nav);
+        settingsNav.setChecked(true);
 
         final Intent socialIntent = new Intent(this, socialActivity.class);
         socialIntent.setAction(Intent.ACTION_VIEW);

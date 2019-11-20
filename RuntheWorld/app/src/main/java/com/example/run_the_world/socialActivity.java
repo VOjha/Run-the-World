@@ -85,6 +85,8 @@ public class socialActivity extends AppCompatActivity {
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        MenuItem socialNav = bottomNav.getMenu().findItem(R.id.social_nav);
+        socialNav.setChecked(true);
 
         final Intent socialIntent = new Intent(this, socialActivity.class);
         socialIntent.setAction(Intent.ACTION_VIEW);
