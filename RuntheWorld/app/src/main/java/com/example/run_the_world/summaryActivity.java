@@ -22,26 +22,39 @@ public class summaryActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String min = intent.getStringExtra("min");
-        String sec = intent.getStringExtra("sec");
+        final String min = intent.getStringExtra("min");
+        final String sec = intent.getStringExtra("sec");
         TextView timeView = (TextView)findViewById(R.id.input_time);
         timeView.setText("Total run time: " + min + " min " + sec + " sec");
 
-        String distance = intent.getStringExtra("distance");
+        final String distance = intent.getStringExtra("distance");
         TextView distanceView = (TextView)findViewById(R.id.input_distance);
         distanceView.setText("Total run distance: " + distance + " miles");
+
+        //update global
+        Globals g = Globals.getInstance();
+        if (Integer.parseInt(min) > 10){
+            g.unlockParis();
+        }
 
         Button btn = findViewById(R.id.Continue);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(summaryActivity.this, distance_log.class));
+                Intent distanceLogIntent = new Intent(summaryActivity.this, distance_log.class);
+                distanceLogIntent.putExtra("MINUTES", min);
+                distanceLogIntent.putExtra("SECONDS", sec);
+                distanceLogIntent.putExtra("DISTANCE", distance);
+
+                startActivity(distanceLogIntent);
             }
         });
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        MenuItem homeNav = bottomNav.getMenu().findItem(R.id.home_nav);
+        homeNav.setChecked(true);
 
         final Intent socialIntent = new Intent(this, socialActivity.class);
         socialIntent.setAction(Intent.ACTION_VIEW);

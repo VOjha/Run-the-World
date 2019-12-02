@@ -30,7 +30,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:drawable/editbox_dropdown_dark_frame"
-                    android:text="@string/destination"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -43,10 +42,10 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <TextView
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/distance_to_run"
+                android:text="10"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:padding="5dp"/>
@@ -67,9 +66,8 @@
 
             <EditText
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:padding="5dp"
-                android:hint="@string/time_needed"
+                android:layout_height="wrap_content"
+                android:text="4"
                 android:textStyle="bold"
                 android:textSize="18sp"/>
 

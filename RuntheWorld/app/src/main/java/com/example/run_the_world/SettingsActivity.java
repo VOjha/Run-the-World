@@ -2,6 +2,8 @@ package com.example.run_the_world;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +21,8 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        MenuItem settingsNav = bottomNav.getMenu().findItem(R.id.settings_nav);
+        settingsNav.setChecked(true);
 
         final Intent socialIntent = new Intent(this, socialActivity.class);
         socialIntent.setAction(Intent.ACTION_VIEW);
@@ -52,5 +56,25 @@ public class SettingsActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        Spinner spinnerDist = (Spinner) findViewById(R.id.dist_spinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.dist_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        spinnerDist.setAdapter(adapter);
+
+        Spinner spinnerLang = (Spinner) findViewById(R.id.lang_spinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapterLang = ArrayAdapter.createFromResource(this,
+                R.array.lang_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapterLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        spinnerLang.setAdapter(adapterLang);
+
+
     }
 }

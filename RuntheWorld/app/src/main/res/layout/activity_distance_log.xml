@@ -8,24 +8,11 @@
     android:orientation="vertical">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical" >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal" />
-    </LinearLayout>
-
-
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/graph"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="400dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -36,66 +23,130 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="Total Run "
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:adjustViewBounds="true"
         android:maxWidth="250dp"
         android:maxHeight="100dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="#000000"
         />
+
+    <TextView
+        android:id="@+id/total_run"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="613 miles"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="Days"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="400dp"
+        android:layout_alignParentLeft="true"
         android:layout_marginLeft="35dp"
         android:adjustViewBounds="true"
         android:maxWidth="250dp"
         android:maxHeight="100dp"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textColor="#000000"
         />
+
+    <TextView
+        android:id="@+id/num_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:layout_marginTop="430dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"/>
 
 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Time (min)"
-        android:layout_marginTop="500dp"
-        android:layout_marginLeft="40dp"
+        android:text="Time"
+        android:layout_marginTop="520dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
         android:adjustViewBounds="true"
         android:maxWidth="250dp"
         android:maxHeight="100dp"
-        android:textSize="16dp"
-        android:textColor="#000000"
-        />
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Max Run per  (miles)"
-        android:layout_marginTop="370dp"
-        android:layout_marginLeft="218dp"
-        android:adjustViewBounds="true"
-        android:maxWidth="250dp"
-        android:maxHeight="100dp"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textColor="#000000"
         />
 
     <TextView
+        android:id="@+id/time_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7907 min"
+        android:layout_marginTop="550dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Distance in World (mile)"
-        android:layout_marginTop="500dp"
+        android:text="Longest Run"
+        android:layout_marginTop="400dp"
+        android:layout_marginRight="35dp"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:maxWidth="250dp"
+        android:maxHeight="100dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/longest_run"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 miles"
+        android:layout_marginTop="430dp"
+        android:layout_marginRight="35dp"
+        android:layout_alignParentRight="true"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Virtual Distance"
+        android:layout_marginTop="520dp"
         android:layout_marginLeft="190dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dp"
         android:adjustViewBounds="true"
         android:maxWidth="250dp"
         android:maxHeight="100dp"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textColor="#000000"
         />
+
+    <TextView
+        android:id="@+id/virtual_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4905 miles"
+        android:layout_marginTop="550dp"
+        android:layout_marginRight="35dp"
+        android:layout_alignParentRight="true"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
