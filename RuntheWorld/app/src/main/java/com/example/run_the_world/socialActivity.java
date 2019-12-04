@@ -38,6 +38,9 @@ public class socialActivity extends AppCompatActivity {
     private ListView myList;
     private List<String> listValues;
     private Button inviteButton;
+    Button showPopupBtn, closePopupBtn1, closePopupBtn2;
+    PopupWindow popupWindow;
+    LinearLayout linearLayout1;
 
     public class inviteListener implements View.OnClickListener {
 
@@ -82,6 +85,42 @@ public class socialActivity extends AppCompatActivity {
 
             }
         });
+
+        // invited pop up after 5s
+        linearLayout1 = (LinearLayout) findViewById(R.id.linearLayout1);
+        new android.os.Handler().postDelayed(
+                new Runnable() {
+                    public void run() {
+                        //instantiate the popup.xml layout file
+                        LayoutInflater layoutInflater = (LayoutInflater) socialActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        View customView = layoutInflater.inflate(R.layout.invite_popup,null);
+
+                        closePopupBtn1 = (Button) customView.findViewById(R.id.closePopupBtn1);
+                        closePopupBtn2 = (Button) customView.findViewById(R.id.closePopupBtn2);
+
+                        //instantiate popup window
+                        popupWindow = new PopupWindow(customView, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+                        //display the popup window
+                        popupWindow.showAtLocation(linearLayout1, Gravity.CENTER, 0, 0);
+
+                        //close the popup window on button click
+                        closePopupBtn1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                popupWindow.dismiss();
+                            }
+                        });
+                        //close the popup window on button click
+                        closePopupBtn1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                popupWindow.dismiss();
+                            }
+                        });
+                    }
+                },
+                5000);
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
