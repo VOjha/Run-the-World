@@ -61,7 +61,7 @@ public class DuringRun extends AppCompatActivity {
                     accum = millis;
                     millis = 0;
                     timerHandler.removeCallbacks(timerRunnable);
-                    btn.setEnabled(false);
+                    //btn.setEnabled(false);
                     b.setText("start");
                 } else {
                     btn.setEnabled(true);
