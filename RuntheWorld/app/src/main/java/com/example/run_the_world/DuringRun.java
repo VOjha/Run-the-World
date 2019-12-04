@@ -49,7 +49,9 @@ public class DuringRun extends AppCompatActivity {
 
         //timer
         Button b = (Button) findViewById(R.id.toggle);
+        final Button btn = (Button) findViewById(R.id.done);
         b.setText("start");
+        btn.setEnabled(false);
         b.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -59,8 +61,10 @@ public class DuringRun extends AppCompatActivity {
                     accum = millis;
                     millis = 0;
                     timerHandler.removeCallbacks(timerRunnable);
+                    //btn.setEnabled(false);
                     b.setText("start");
                 } else {
+                    btn.setEnabled(true);
                     startTime = System.currentTimeMillis();
                     timerHandler.postDelayed(timerRunnable, 0);
                     b.setText("pause");
@@ -69,7 +73,7 @@ public class DuringRun extends AppCompatActivity {
         });
 
         //submit data
-        Button btn = (Button) findViewById(R.id.done);
+        //Button btn = (Button) findViewById(R.id.done);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
