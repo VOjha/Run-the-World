@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button createTripButton;
     private Button enterRunButton;
+    private Button trackRunButton;
     private BottomNavigationView bottomNav;
 
     @Override
@@ -22,16 +23,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         createTripButton = (Button) findViewById(R.id.create_trip);
         enterRunButton = (Button) findViewById(R.id.enter_run);
+        trackRunButton = (Button) findViewById(R.id.track_run);
 
         createTripButton.setOnClickListener(this);
         enterRunButton.setOnClickListener(this);
+        trackRunButton.setOnClickListener(this);
+
+        trackRunButton.setEnabled(false);
 
         Globals g = Globals.getInstance();
         boolean isRunCreated = g.isRunCreated();
 
         enterRunButton.setEnabled(isRunCreated);
 
-        if (isRunCreated) createTripButton.setText("Track Run");
+        //if (isRunCreated) createTripButton.setText("Track Run");
+        if (isRunCreated) trackRunButton.setEnabled(true);
+
+
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
@@ -79,6 +87,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(enterRunIntent);
         } else if (v.getId() == R.id.create_trip) {
             Intent createTripIntent = new Intent(this,CreateNewRun.class);
+            createTripIntent.setAction(Intent.ACTION_VIEW);
+            startActivity(createTripIntent);
+        } else if (v.getId() == R.id.track_run) {
+            Intent createTripIntent = new Intent(this,DuringRun.class);
             createTripIntent.setAction(Intent.ACTION_VIEW);
             startActivity(createTripIntent);
         }
