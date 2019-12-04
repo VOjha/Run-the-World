@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button createTripButton;
     private Button enterRunButton;
     private BottomNavigationView bottomNav;
+    private LinearLayout tripInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         createTripButton = (Button) findViewById(R.id.create_trip);
         enterRunButton = (Button) findViewById(R.id.enter_run);
 
+        tripInfo = (LinearLayout) findViewById(R.id.trip_info);
+
         createTripButton.setOnClickListener(this);
         enterRunButton.setOnClickListener(this);
 
@@ -31,7 +35,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         enterRunButton.setEnabled(isRunCreated);
 
-        if (isRunCreated) createTripButton.setText("Track Run");
+        if (isRunCreated) {
+            createTripButton.setText("Track Run");
+        } else {
+            tripInfo.setVisibility(View.GONE);
+        }
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);

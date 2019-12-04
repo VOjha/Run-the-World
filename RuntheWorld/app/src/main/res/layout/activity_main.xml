@@ -13,6 +13,27 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:id="@+id/trip_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Current Trip: Paris to Rome"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="3% complete"/>
+
+        </LinearLayout>
+
         <ImageView
             android:layout_width="250dp"
             android:layout_height="250dp"
