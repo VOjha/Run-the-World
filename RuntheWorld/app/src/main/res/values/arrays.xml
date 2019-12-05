@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="planets_array">
+        <item>Rome</item>
+        <item>Cairo</item>
         <item>Paris</item>
         <item>Shanghai</item>
-        <item>Cairo</item>
         <item>Sydney</item>
     </string-array>
 </resources>

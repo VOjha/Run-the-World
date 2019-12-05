@@ -22,15 +22,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="19sp"
                 android:text="Current Origin:"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorBlack"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="19sp"
                 android:text="Paris"/>
         </LinearLayout>
 
@@ -44,14 +45,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:textSize="19sp"
                 android:text="Destination: "/>
 
                 <Spinner
                     android:id="@+id/destinations"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:drawable/editbox_dropdown_dark_frame"
-                    android:textSize="18sp"
+                    android:background="@android:drawable/editbox_dropdown_light_frame"
+                    android:textSize="19sp"
                     android:textStyle="bold" />
 
 
@@ -68,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:text="10"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="19sp"
                 android:padding="5dp"/>
 
             <TextView
@@ -76,27 +78,27 @@
                 android:layout_height="wrap_content"
                 android:text="@string/distance_unit"
                 android:padding="5dp"
-                android:textSize="18sp"/>
+                android:textSize="19sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/in"
                 android:padding="5dp"
-                android:textSize="18sp"/>
+                android:textSize="19sp"/>
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4"
                 android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:textSize="19sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/time_unit"
-                android:textSize="18sp"/>
+                android:textSize="19sp"/>
 
         </LinearLayout>
 
@@ -104,6 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="italic"
+            android:textSize="17sp"
             android:text="Real distance: 882 miles"/>
 
         <LinearLayout
@@ -115,6 +118,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="19sp"
                 android:text="Gain Factor:"/>
 
             <EditText
@@ -122,17 +126,18 @@
                 android:layout_height="wrap_content"
                 android:text="8.8"
                 android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:textSize="19sp"/>
 
         </LinearLayout>
 
         <Button
             android:id="@+id/done_create"
-            android:layout_marginTop="50dp"
+            android:layout_width="184dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="70dp"
             android:padding="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/done_activity_button"/>
+            android:text="@string/done_activity_button"
+            android:textSize="19sp"/>
 
     </LinearLayout>
 

@@ -13,11 +13,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:textColor="@color/colorWhite"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="93dp"
         android:textStyle="bold"
-        android:textSize="15sp"
-        android:text="Currently running from: Paris to Rome"/>
+        android:textSize="25sp"
+        android:text="Paris"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="245dp"
+        android:layout_marginLeft="250dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="Rome"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,6 +45,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:text="start" />
 
         <Button
@@ -43,6 +56,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:text="finish" />
     </LinearLayout>
 
@@ -51,11 +67,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="320dp"
         android:layout_marginBottom="50dp"
         android:gravity="center"
         android:orientation="horizontal">
-        android:layout_marginTop="350dp">
 
         <TextView
             android:id="@+id/input_time"

@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="23sp"
             android:text="@string/date"/>
 
         <EditText
@@ -24,12 +24,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="date"
+            android:textSize="23sp"
             android:text="01/01/2020" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="23sp"
             android:paddingTop="30dp"
             android:text="@string/distance"/>
 
@@ -42,7 +43,8 @@
                 android:id="@+id/input_distance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4" />
+                android:text="4"
+                android:textSize="23sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,16 +52,17 @@
                 android:textStyle="bold|italic"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="@string/miles"/>
+                android:text="@string/miles"
+                android:textSize="23sp"/>
 
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="23sp"
             android:paddingTop="30dp"
-            android:text="@string/time"/>
+            android:text="@string/time" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,7 +73,8 @@
                 android:id="@+id/input_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="60" />
+                android:text="60"
+                android:textSize="23dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -78,17 +82,20 @@
                 android:textStyle="bold|italic"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="@string/min"/>
+                android:text="@string/min"
+                android:textSize="23sp" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/done"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:text="@string/done" />
+            android:id="@+id/done_create"
+            android:layout_width="184dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="70dp"
+            android:padding="10dp"
+            android:text="@string/done_activity_button"
+            android:textSize="19sp"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
