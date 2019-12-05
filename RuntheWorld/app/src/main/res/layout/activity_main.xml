@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Background"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -38,7 +39,6 @@
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_margin="20dp"
-            android:tint="@color/colorWhite"
             android:src="@drawable/globe"/>
 
         <Button
