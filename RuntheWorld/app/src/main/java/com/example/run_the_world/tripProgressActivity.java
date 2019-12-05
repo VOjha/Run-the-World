@@ -3,43 +3,24 @@ package com.example.run_the_world;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class CreateNewRun extends AppCompatActivity implements View.OnClickListener {
-    private Button toTripButton;
-    private BottomNavigationView bottomNav;
+public class tripProgressActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private Button toTrackingButton;
+    private BottomNavigationView bottomNav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_new_run);
-        toTripButton = (Button)findViewById(R.id.done_create);
-        toTripButton.setOnClickListener(this);
-
-        /*Spinner spinner = (Spinner) findViewById(R.id.starting_point);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.planets_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);*/
-
-        Spinner spinnerDestination = (Spinner) findViewById(R.id.destinations);
-        ArrayAdapter<CharSequence> adapterDestination = ArrayAdapter.createFromResource(this,
-                R.array.planets_array, android.R.layout.simple_spinner_item);
-        adapterDestination.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerDestination.setAdapter(adapterDestination);
+        setContentView(R.layout.activity_trip_progress);
+        toTrackingButton = (Button)findViewById(R.id.start);
+        toTrackingButton.setOnClickListener(this);
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
@@ -78,15 +59,12 @@ public class CreateNewRun extends AppCompatActivity implements View.OnClickListe
                 return true;
             }
         });
-    }
 
+    }
     public void onClick(View v) {
-        Globals g = Globals.getInstance();
-        g.createRun();
 
-        Intent toTrip = new Intent(this, tripProgressActivity.class);
-        toTrip.setAction(Intent.ACTION_VIEW);
-        startActivity(toTrip);
+        Intent toTracking = new Intent(this, DuringRun.class);
+        toTracking.setAction(Intent.ACTION_VIEW);
+        startActivity(toTracking);
     }
-
 }
