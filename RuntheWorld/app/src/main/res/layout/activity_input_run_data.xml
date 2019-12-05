@@ -88,6 +88,8 @@
         </LinearLayout>
 
         <Button
+            android:background="@color/colorSecondary3"
+            android:textColor="@color/colorWhite"
             android:id="@+id/done_button"
             android:layout_width="184dp"
             android:layout_height="65dp"

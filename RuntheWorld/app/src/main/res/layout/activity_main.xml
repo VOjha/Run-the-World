@@ -42,6 +42,8 @@
             android:src="@drawable/globe"/>
 
         <Button
+            android:background="@color/colorSecondary3"
+            android:textColor="@color/colorWhite"
             android:id="@+id/create_trip"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -49,6 +51,8 @@
             android:text="Create Virtual Trip"/>
 
         <Button
+            android:background="@color/colorSecondary3"
+            android:textColor="@color/colorWhite"
             android:id="@+id/input_run"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
