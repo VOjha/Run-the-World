@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         enterRunButton.setEnabled(isRunCreated);
 
-        if (isRunCreated) {
+        /*if (isRunCreated) {
             createTripButton.setText("Track Run");
         } else {
             tripInfo.setVisibility(View.GONE);
-        }
+        }*/
         
         if (isRunCreated) trackRunButton.setEnabled(true);
 
