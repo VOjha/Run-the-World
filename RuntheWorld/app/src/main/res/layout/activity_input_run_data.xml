@@ -88,7 +88,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/done_create"
+            android:id="@+id/done_button"
             android:layout_width="184dp"
             android:layout_height="65dp"
             android:layout_marginTop="70dp"

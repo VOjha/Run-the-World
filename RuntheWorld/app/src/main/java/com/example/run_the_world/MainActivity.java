@@ -14,7 +14,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button createTripButton;
     private Button enterRunButton;
-    private Button trackRunButton;
     private BottomNavigationView bottomNav;
     private LinearLayout tripInfo;
 
@@ -24,24 +23,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         createTripButton = (Button) findViewById(R.id.create_trip);
-        enterRunButton = (Button) findViewById(R.id.enter_run);
-        trackRunButton = (Button) findViewById(R.id.track_run);
+        enterRunButton = (Button) findViewById(R.id.input_run);
 
         tripInfo = (LinearLayout) findViewById(R.id.trip_info);
 
         createTripButton.setOnClickListener(this);
         enterRunButton.setOnClickListener(this);
-        trackRunButton.setOnClickListener(this);
-
-        trackRunButton.setEnabled(false);
 
         Globals g = Globals.getInstance();
         boolean isRunCreated = g.isRunCreated();
 
         enterRunButton.setEnabled(isRunCreated);
 
-        
-        if (isRunCreated) trackRunButton.setEnabled(true);
+        if (isRunCreated) {
+            createTripButton.setText("Track Run");
+        } else {
+            tripInfo.setVisibility(View.GONE);
+        }
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
@@ -83,18 +81,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void onClick(View v) {
-        if (v.getId() == R.id.enter_run){
+        if (v.getId() == R.id.input_run) {
             Intent enterRunIntent = new Intent(this, InputRunData.class);
             enterRunIntent.setAction(Intent.ACTION_VIEW);
             startActivity(enterRunIntent);
         } else if (v.getId() == R.id.create_trip) {
-            Intent createTripIntent = new Intent(this,CreateNewRun.class);
-            createTripIntent.setAction(Intent.ACTION_VIEW);
-            startActivity(createTripIntent);
-        } else if (v.getId() == R.id.track_run) {
-            Intent createTripIntent = new Intent(this,DuringRun.class);
-            createTripIntent.setAction(Intent.ACTION_VIEW);
-            startActivity(createTripIntent);
+            Globals g = Globals.getInstance();
+            boolean isRunCreated = g.isRunCreated();
+
+            if (isRunCreated) {
+                Intent trackRunIntent = new Intent(this, DuringRun.class);
+                trackRunIntent.setAction(Intent.ACTION_VIEW);
+                startActivity(trackRunIntent);
+            } else {
+                Intent createTripIntent = new Intent(this, CreateNewRun.class);
+                createTripIntent.setAction(Intent.ACTION_VIEW);
+                startActivity(createTripIntent);
+            }
         }
     }
 }

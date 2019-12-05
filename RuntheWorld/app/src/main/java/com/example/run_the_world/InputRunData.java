@@ -20,7 +20,9 @@ public class InputRunData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_run_data);
 
-        Button btn = findViewById(R.id.done);
+        final Intent summaryIntent = new Intent(this, summaryActivity.class);
+
+        Button btn = findViewById(R.id.done_button);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,12 +36,11 @@ public class InputRunData extends AppCompatActivity {
                 final EditText input_time = (EditText) findViewById(R.id.input_time);
                 String time = input_time.getText().toString();
 
-                Intent intent = new Intent(InputRunData.this, summaryActivity.class);
-                intent.putExtra("date", date);
-                intent.putExtra("distance", distance);
-                intent.putExtra("min", time);
-                intent.putExtra("sec", "0");
-                startActivity(intent);
+                summaryIntent.putExtra("date", date);
+                summaryIntent.putExtra("distance", distance);
+                summaryIntent.putExtra("min", time);
+                summaryIntent.putExtra("sec", "0");
+                startActivity(summaryIntent);
             }
         });
 
