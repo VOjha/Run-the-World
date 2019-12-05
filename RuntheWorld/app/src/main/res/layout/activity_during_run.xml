@@ -85,7 +85,7 @@
             android:background="@drawable/record_display"
             android:gravity="center"
             android:text="@string/time_been_running"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -98,7 +98,7 @@
             android:background="@drawable/record_display"
             android:gravity="center"
             android:text="@string/distance_been_running"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold" />
 
