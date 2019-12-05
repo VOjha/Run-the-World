@@ -25,13 +25,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="Current Trip: Paris to Rome"/>
+                android:text="Current Trip: Rome to Paris"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="italic"
-                android:text="3% complete"/>
+                android:text="30% complete"/>
 
         </LinearLayout>
 
