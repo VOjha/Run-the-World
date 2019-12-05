@@ -42,14 +42,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Virtual distance: 0km/10360km" />
+            android:text="Virtual distance: 0 / 882 mi" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Actual distance: 0km/6290km" />
+            android:text="Actual distance: 0 / 10 mi" />
 
         <ProgressBar
             android:id="@+id/progressBar2"

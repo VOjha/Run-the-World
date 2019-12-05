@@ -52,6 +52,7 @@ public class DuringRun extends AppCompatActivity {
         final Button btn = (Button) findViewById(R.id.done);
         b.setText("start");
         btn.setEnabled(false);
+        btn.setAlpha(0.5f);
         b.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -65,6 +66,7 @@ public class DuringRun extends AppCompatActivity {
                     b.setText("start");
                 } else {
                     btn.setEnabled(true);
+                    btn.setAlpha(1);
                     startTime = System.currentTimeMillis();
                     timerHandler.postDelayed(timerRunnable, 0);
                     b.setText("pause");
