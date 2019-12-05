@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         boolean isRunCreated = g.isRunCreated();
 
         enterRunButton.setEnabled(isRunCreated);
+        enterRunButton.setAlpha(isRunCreated ? 1 : 0.5f);
 
         if (isRunCreated) {
             createTripButton.setText("Track Run");
