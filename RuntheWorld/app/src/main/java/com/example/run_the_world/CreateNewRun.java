@@ -19,15 +19,15 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class CreateNewRun extends AppCompatActivity implements View.OnClickListener {
-    private Button toTrackingButton;
+    private Button toTripButton;
     private BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_new_run);
-        toTrackingButton = (Button)findViewById(R.id.done_create);
-        toTrackingButton.setOnClickListener(this);
+        toTripButton = (Button)findViewById(R.id.done_create);
+        toTripButton.setOnClickListener(this);
 
         /*Spinner spinner = (Spinner) findViewById(R.id.starting_point);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -84,9 +84,9 @@ public class CreateNewRun extends AppCompatActivity implements View.OnClickListe
         Globals g = Globals.getInstance();
         g.createRun();
 
-        Intent toTracking = new Intent(this, DuringRun.class);
-        toTracking.setAction(Intent.ACTION_VIEW);
-        startActivity(toTracking);
+        Intent toTrip = new Intent(this, tripProgressActivity.class);
+        toTrip.setAction(Intent.ACTION_VIEW);
+        startActivity(toTrip);
     }
 
 }

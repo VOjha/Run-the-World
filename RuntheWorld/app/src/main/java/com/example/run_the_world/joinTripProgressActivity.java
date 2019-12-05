@@ -2,45 +2,25 @@ package com.example.run_the_world;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button createTripButton;
-    private Button enterRunButton;
-    private BottomNavigationView bottomNav;
-    private LinearLayout tripInfo;
+public class joinTripProgressActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private Button toTrackingButton;
+    private BottomNavigationView bottomNav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        createTripButton = (Button) findViewById(R.id.create_trip);
-        enterRunButton = (Button) findViewById(R.id.input_run);
-
-        tripInfo = (LinearLayout) findViewById(R.id.trip_info);
-
-        createTripButton.setOnClickListener(this);
-        enterRunButton.setOnClickListener(this);
-
-        Globals g = Globals.getInstance();
-        boolean isRunCreated = g.isRunCreated();
-
-        enterRunButton.setEnabled(isRunCreated);
-        enterRunButton.setAlpha(isRunCreated ? 1 : 0.5f);
-
-        if (isRunCreated) {
-            createTripButton.setText("Track Run");
-        } else {
-            tripInfo.setVisibility(View.GONE);
-        }
+        setContentView(R.layout.activity_join_trip_progress);
+        toTrackingButton = (Button)findViewById(R.id.start);
+        toTrackingButton.setOnClickListener(this);
 
         // Stuff for bottom nav bar
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
@@ -79,26 +59,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return true;
             }
         });
+
     }
-
     public void onClick(View v) {
-        if (v.getId() == R.id.input_run) {
-            Intent enterRunIntent = new Intent(this, InputRunData.class);
-            enterRunIntent.setAction(Intent.ACTION_VIEW);
-            startActivity(enterRunIntent);
-        } else if (v.getId() == R.id.create_trip) {
-            Globals g = Globals.getInstance();
-            boolean isRunCreated = g.isRunCreated();
 
-            if (isRunCreated) {
-                Intent trackRunIntent = new Intent(this, DuringRun.class);
-                trackRunIntent.setAction(Intent.ACTION_VIEW);
-                startActivity(trackRunIntent);
-            } else {
-                Intent createTripIntent = new Intent(this, CreateNewRun.class);
-                createTripIntent.setAction(Intent.ACTION_VIEW);
-                startActivity(createTripIntent);
-            }
-        }
+        Intent toTracking = new Intent(this, DuringRun.class);
+        toTracking.setAction(Intent.ACTION_VIEW);
+        startActivity(toTracking);
     }
 }

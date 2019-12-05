@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".socialActivity" >
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,10 +15,12 @@
 
     <ListView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="650dp"
         android:layout_below="@+id/mainText"
         android:id="@+id/list"
         android:background="#aaaaaa" />
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -37,6 +40,18 @@
         tools:context="com.popupwindow.MainActivity"
         android:id="@+id/linearLayout1">
 
+        <Button
+            android:id="@+id/button_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="Add by Number" />
     </LinearLayout>
+
+
 
 </RelativeLayout>

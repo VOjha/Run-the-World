@@ -3,22 +3,28 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#000"
+    android:background="@color/colorWhite"
     android:padding="10px">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="John invites you to a run ."
-        android:textColor="#fff"/>
+
+        android:textSize="23sp"
+        android:layout_marginBottom="25dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Accept"
+        android:background="@color/colorSecondary3"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="15dp"
         android:id="@+id/closePopupBtn1"/>
 
     <Button
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Decline"
