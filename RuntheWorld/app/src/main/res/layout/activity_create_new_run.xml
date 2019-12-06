@@ -141,7 +141,7 @@
             android:textColor="@color/colorWhite"
             android:id="@+id/done_create"
             android:layout_width="184dp"
-            android:layout_height="65dp"
+            android:layout_height="55dp"
             android:layout_marginTop="70dp"
             android:padding="10dp"
             android:text="@string/done_activity_button"

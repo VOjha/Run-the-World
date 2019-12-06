@@ -11,6 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mainText"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="15dp"
         android:text="Friends" />
 
     <ListView
@@ -18,7 +22,7 @@
         android:layout_height="650dp"
         android:layout_below="@+id/mainText"
         android:id="@+id/list"
-        android:background="#aaaaaa" />
+        android:background="@color/colorWhite" />
 
 
 
@@ -42,10 +46,13 @@
 
         <Button
             android:id="@+id/button_list"
+            android:background="@color/colorSecondary2"
+            android:textColor="@color/colorWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="30dp"
             android:layout_gravity="right|bottom"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="25dp"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_centerVertical="true"
