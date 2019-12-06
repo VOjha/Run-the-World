@@ -49,7 +49,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:layout_centerVertical="true"
-            android:text="Add by Number" />
+            android:text="Add Friend by Phone Number" />
     </LinearLayout>
 
 
