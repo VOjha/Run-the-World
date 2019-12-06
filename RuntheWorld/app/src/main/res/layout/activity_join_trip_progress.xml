@@ -17,9 +17,10 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="30dp"
             android:gravity="center"
+            android:textStyle="bold"
             android:text="Your current Trip"
             android:textSize="20dp" />
 
@@ -63,15 +64,21 @@
 
         <Button
             android:id="@+id/start"
-            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_width="185dp"
+            android:layout_gravity="center"
+            android:background="@color/colorSecondary3"
+            android:textColor="@color/colorWhite"
             android:layout_height="wrap_content"
-            android:text="Start" />
+            android:text="Start"
+            android:layout_marginBottom="40dp"/>
 
         <TextView
             android:layout_width="match_parent"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="30dp"
             android:gravity="center"
             android:text="John's current Trip"
             android:textSize="20dp" />
