@@ -9,16 +9,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="top"
         android:orientation="vertical"
         android:padding="50dp">
 
         <TextView
-            android:textSize="20dp"
+            android:textSize="22dp"
             android:id="@+id/title"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="120dp"
             android:gravity="center"
             android:text="Run summary" />
 
@@ -40,31 +42,34 @@
             android:gravity="center"
             android:text="total distance: 0km" />
 
-        <Button
-            android:id="@+id/Continue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Continue"
-            android:background="@color/colorSecondary3"
-            android:textColor="@color/colorWhite"
-            android:layout_marginBottom="20dp"/>
-"/>
-
         <TextView
             android:id="@+id/progress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:text="Progress to Paris: 30% " />
+            android:gravity="center"
+            android:text="Progress to Paris: 30% "
+            android:layout_margin="10dp"/>
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
+            android:layout_marginBottom="50dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:max="100"
             android:progress="30" />
+
+        <Button
+            android:id="@+id/Continue"
+            android:layout_gravity="center"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:background="@color/colorSecondary3"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
 
