@@ -36,22 +36,22 @@
         app:itemTextColor="@drawable/bottom_color"
         app:menu="@menu/bottom_menu" />
 
+    <Button
+        android:background="@color/colorSecondary2"
+        android:textColor="@color/colorWhite"
+        android:text="Add Friend By Phone Number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="horizontal"
         tools:context="com.popupwindow.MainActivity"
         android:id="@+id/linearLayout1">
-
-        <Button
-            android:id="@+id/button_list"
-            android:background="@color/colorSecondary2"
-            android:textColor="@color/colorWhite"
-            android:padding="30dp"
-            android:layout_gravity="right|bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginBottom="32dp"/>
-
     </LinearLayout>
 
 
