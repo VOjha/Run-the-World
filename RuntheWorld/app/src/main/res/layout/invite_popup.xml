@@ -4,30 +4,36 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@color/colorWhite"
-    android:padding="10px">
+    android:padding="20dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="John invites you to a run ."
-
+        android:gravity="center"
+        android:text="John has invited you to a run!"
         android:textSize="23sp"
         android:layout_marginBottom="25dp"/>
 
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Accept"
-        android:background="@color/colorSecondary3"
-        android:textColor="@color/colorWhite"
-        android:layout_marginBottom="15dp"
-        android:id="@+id/closePopupBtn1"/>
+        android:orientation="horizontal">
 
-    <Button
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accept"
+            android:background="@color/colorSecondary3"
+            android:textColor="@color/colorWhite"
+            android:layout_marginRight="15dp"
+            android:id="@+id/closePopupBtn1"/>
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Decline"
-        android:id="@+id/closePopupBtn2"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Decline"
+            android:id="@+id/closePopupBtn2"/>
+
+    </LinearLayout>
 
 </LinearLayout>
